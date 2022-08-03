@@ -14,12 +14,20 @@
       <div class="conatiner-fluid text-center">
         <h3 class="font-weight-bolder">Student Marks Display</h3>
       </div>
-      <div class="container form-group">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="SEARCH BY ADM NO."
-        />
+      <div class="container d-md-flex justify-content-between">
+        <div class="back-button">
+          <button class="btn btn-danger">BACK</button>
+        </div>
+        <div class="search-bar w-75">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="SEARCH BY ADM NO."
+          />
+        </div>
+        <div class="add-marks-button">
+          <button class="btn btn-success">ADD SCORES</button>
+        </div>
       </div>
     </div>
     <div class="container text-center border mt-3 py-2 font-italic">
@@ -27,7 +35,7 @@
         student description
       </h5>
     </div>
-    <div class="container mt-4">
+    <div class="table-container container mt-4 p-0 border">
       <table class="table table-bordered text-center">
         <thead>
           <th>SUBJECT</th>
