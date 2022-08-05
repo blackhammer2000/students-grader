@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OOP-CLASSES</title>
     <script src="./app.js" defer></script>
+    <script src="../modules/parent_classes.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
   </head>
   <body>
     <div
-      class="container d-flex flex-column justify-content-center align-items-center"
+      class="container-md container-fluid d-md-flex flex-column justify-content-center align-items-center"
     >
-      <fieldset class="border border-info w-50 px-5">
-        <legend class="text-center border bg-info text-white">
+      <fieldset class="border border-dark w-100 px-5">
+        <legend class="text-center border bg-light text-black-50">
           STUDENTS GRADES COLLECTOR
         </legend>
         <form action="" class="form">
@@ -22,7 +23,7 @@
             <input
               data-name
               type="text"
-              class="form-control my-4 border-info"
+              class="form-control my-4 border-dark"
               placeholder="Enter Student Name"
               required
             />
@@ -31,7 +32,7 @@
             <input
               data-email
               type="email"
-              class="form-control my-4 border-info"
+              class="form-control my-4 border-dark"
               placeholder="Enter Student Email"
               required
             />
@@ -40,7 +41,7 @@
             <input
               data-admission
               type="number"
-              class="form-control my-4 border-info"
+              class="form-control my-4 border-dark"
               placeholder="Enter Student ADM NO."
               required
             />
@@ -49,7 +50,7 @@
             <input
               data-course
               type="text"
-              class="form-control my-4 border-info"
+              class="form-control my-4 border-dark"
               placeholder="Enter Student Course"
               required
             />
@@ -58,22 +59,24 @@
             <input
               data-gender
               type="text"
-              class="form-control my-4 border-info"
+              class="form-control my-4 border-dark"
               placeholder="Enter Student Gender"
               required
             />
           </div>
-          <div class="form-group text-center">
-            <button type="submit" class="btn btn-outline-primary mr-4">
+          <div class="form-group w-100">
+            <button type="submit" class="btn btn-success mr-4 w-100">
               SAVE
             </button>
           </div>
         </form>
       </fieldset>
       <div class="container text-center mt-4 w-50">
-        <button data-show-grades class="btn btn-outline-success ml-4">
-          SHOW GRADES
-        </button>
+        <a href="../students_marks_display/marks_display.html">
+          <button data-show-grades class="btn btn-outline-primary ml-4">
+            SHOW GRADES
+          </button></a
+        >
         <button data-show-all-grades class="btn btn-outline-dark ml-4">
           SHOW ALL GRADES
         </button>
