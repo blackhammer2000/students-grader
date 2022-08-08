@@ -16,11 +16,7 @@ form.addEventListener("submit", async (e) => {
     form.querySelector("[data-subject-score]").value
   );
 
-  const scoreUpdateStatus = await Store.updateUnitScore(
-    subjectName,
-    subjectScore,
-    examDate
-  );
+  await Store.updateUnitScore(subjectName, subjectScore, examDate);
 
   Utilities.clearInputs();
 });
