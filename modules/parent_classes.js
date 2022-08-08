@@ -51,6 +51,37 @@ class Store {
 
     localStorage.setItem("grading-students", JSON.stringify(students));
   }
+
+  static async updateUnitScore(unitName, unitScore, dateTaken) {
+    const students = await Store.getStudents();
+    const selectedStudent = await Store.fetchSelectedStudent();
+    const selectedStudentUnits = selectedStudent.units;
+    const roundedScore = Grader.roundScore(unitScore);
+
+    selectedStudentUnits.forEach((unit) => {
+      if (unit.title === unitName) {
+        unit.score = unitScore;
+        unit.date = dateTaken;
+        unit.rounded_score = roundedScore;
+        unit.grade = Grader.grade(roundedScore);
+      }
+    });
+
+    students.forEach((student, index) => {
+      if (
+        student.name === selectedStudent.name &&
+        student.id === selectedStudent.id
+      ) {
+        students.splice(index, 1, selectedStudent);
+      }
+    });
+
+    localStorage.setItem("grading-students", JSON.stringify(students));
+    localStorage.setItem(
+      "grading-students-selected-student",
+      JSON.stringify(selectedStudent)
+    );
+  }
 }
 
 class UserInterface {
@@ -141,7 +172,7 @@ class Student {
     let units = null;
     switch (course.toLowerCase()) {
       case "software-development":
-        const softtwareUnits = [
+        const softwareUnits = [
           "html",
           "css",
           "javascript",
@@ -158,7 +189,7 @@ class Student {
           "springboot",
           "git",
         ];
-        units = this.createUnits(softtwareUnits);
+        units = this.createUnits(softwareUnits);
         break;
       case "cyber-security":
         const cyberUnits = [
@@ -175,6 +206,10 @@ class Student {
           "network_security",
         ];
         units = Student.createUnits(cyberUnits);
+        break;
+
+      case "database-administrator":
+        const databaseAdminUnits = [];
         break;
 
       default:
@@ -224,13 +259,24 @@ class Grader {
       case below40 === true:
         grade = "F";
     }
-    return { grade, score };
+    return grade;
+  }
+
+  static roundScore(score) {
+    const moduloByFive = score % 5;
+    const previousMultiple = score - moduloByFive;
+    const nextMultiple = previousMultiple + 5;
+    const difference = nextMultiple - score;
+
+    const finalScore = difference <= 3 ? nextMultiple : score;
+
+    return finalScore;
   }
 }
 
 class Utilities {
   static clearInputs() {
-    const inputs = document.querySelectorAll("input");
+    const inputs = document.querySelectorAll("form input");
     inputs.forEach((input) => (input.value = ""));
   }
 

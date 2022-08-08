@@ -1,5 +1,5 @@
-updateYear();
 window.addEventListener("load", async () => {
+  updateYear();
   await UserInterface.setTableState();
 });
 

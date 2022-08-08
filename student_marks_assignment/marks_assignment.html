@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STUDENTS | MARKS | ASSIGNMENT</title>
+    <link rel="stylesheet" href="./marks_assignment.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="./marks_assignment.js" defer></script>
+    <script src="../modules/parent_classes.js" defer></script>
+  </head>
+  <body class="font-italic">
+    <div class="container-fluid bg-info text-white py-4">
+      <div class="conatiner-fluid text-center">
+        <h3 class="font-weight-bolder">STUDENT SCORES ASSIGNMENT</h3>
+      </div>
+      <div class="container d-md-flex justify-content-between mt-3">
+        <div class="back-button">
+          <a href="../students_marks_display/marks_display.html"
+            ><button class="btn btn-info">BACK</button></a
+          >
+        </div>
+
+        <div class="add-marks-button">
+          <a href="../Students_Registration/index.html">
+            <button data-add-scores class="btn btn-info">
+              ADD NEW STUDENT
+            </button>
+          </a>
+        </div>
+        <div class="add-marks-button">
+          <a
+            href="../all_students_marks_display/all_students_marks_display.html"
+          >
+            <button data-add-scores class="btn btn-info">
+              VIEW ALL GRADES
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-md container-fluid d-md-flex flex-column justify-content-center align-items-center mt-5"
+    >
+      <fieldset class="border-bottom border-info w-100 px-5 pb-4">
+        <legend data-student-legend class="text-center text-black-50"></legend>
+        <div
+          class="form-group p-2 mt-3 d-flex justify-content-center text-center align-items-center flex-column"
+        >
+          <label for="" class="text-primary">Enter Date Of The Exam:</label>
+          <input
+            data-exam-date
+            type="date"
+            class="form-control my-4 border-primary w-75"
+            placeholder="Enter Exam Date"
+            required
+          />
+        </div>
+        <form action="" class="form">
+          <div class="form-group">
+            <input
+              data-subject-name
+              type="text"
+              class="form-control my-4 border-dark"
+              placeholder="Enter Subject Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              data-subject-score
+              type="number"
+              class="form-control my-4 border-dark"
+              placeholder="Enter Subject Score"
+              required
+            />
+          </div>
+
+          <div class="form-group w-100">
+            <button type="submit" class="btn btn-info mr-4 w-100">
+              ADD SCORES
+            </button>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+    <div class="container mt-5 text-center font-weight-light font-italic">
+      <p>
+        STUDENT GRADING SYSTEM DESIGNED BY SAMUEL WAWERU <br />
+        &COPY; <span data-year></span>
+      </p>
+    </div>
+  </body>
+</html>

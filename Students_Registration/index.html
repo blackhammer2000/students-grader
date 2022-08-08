@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OOP-CLASSES</title>
+    <title>STUDENTS GRADING SYSTEM</title>
     <script src="./app.js" defer></script>
     <script src="../modules/parent_classes.js" defer></script>
+    <script src="../modules/common_logic.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
   </head>
@@ -14,7 +15,27 @@
     <div
       class="container-md container-fluid d-md-flex flex-column justify-content-center align-items-center"
     >
-      <fieldset class="border border-dark w-100 px-5">
+      <div
+        class="container-fluid bg-info text-white py-4 d-md-flex justify-content-between mt-3"
+      >
+        <div class="back-button">
+          <a href="../students_marks_display/marks_display.html"
+            ><button data-show-grades class="btn btn-info">
+              SHOW GRADES
+            </button></a
+          >
+        </div>
+        <div class="conatiner-fluid text-center">
+          <h3 class="font-weight-bolder">STUDENT SCORES GRADING SYSTEM</h3>
+        </div>
+        <div class="back-button">
+          <a
+            href="../all_students_marks_display/all_students_marks_display.html"
+            ><button class="btn btn-info">VIEW ALL GRADES</button></a
+          >
+        </div>
+      </div>
+      <fieldset class="border border-dark w-100 px-5 mt-5">
         <legend class="text-center border bg-light text-black-50">
           STUDENTS GRADES COLLECTOR
         </legend>
@@ -71,16 +92,12 @@
           </div>
         </form>
       </fieldset>
-      <div class="container text-center mt-4 w-50">
-        <a href="../students_marks_display/marks_display.html">
-          <button data-show-grades class="btn btn-outline-primary ml-4">
-            SHOW GRADES
-          </button></a
-        >
-        <button data-show-all-grades class="btn btn-outline-dark ml-4">
-          SHOW ALL GRADES
-        </button>
-      </div>
+    </div>
+    <div class="container mt-5 text-center font-weight-light font-italic">
+      <p>
+        STUDENT GRADING SYSTEM DESIGNED BY SAMUEL WAWERU <br />
+        &COPY; <span data-year></span>
+      </p>
     </div>
   </body>
 </html>

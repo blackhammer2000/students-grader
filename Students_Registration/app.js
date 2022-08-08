@@ -1,3 +1,5 @@
+updateYear();
+
 const form = document.querySelector("form");
 const showGrades = document.querySelector("[data-show-grades]");
 
@@ -20,6 +22,7 @@ form.addEventListener("submit", async (e) => {
     units
   );
   await Store.addStudentToLocalStorage(student);
+  Utilities.clearInputs();
 });
 
 showGrades.addEventListener("click", () => {
@@ -29,3 +32,7 @@ showGrades.addEventListener("click", () => {
     }, 3000);
   }
 });
+
+function updateYear() {
+  document.querySelector("[data-year]").innerText = new Date().getFullYear();
+}
