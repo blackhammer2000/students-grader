@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>STUDENT GRADER | ALL STUDENT GRADES</title>
+    <link rel="stylesheet" href="./all_students_marks_display.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="./all_students_marks_display.js" defer></script>
+  </head>
+  <body class="font-italic">
+    <div class="container-fluid bg-info text-white py-4">
+      <div class="conatiner-fluid text-center">
+        <h3 class="font-weight-bolder">ALL STUDENTS DATA</h3>
+      </div>
+      <div class="container d-md-flex justify-content-between mt-3">
+        <div class="back-button">
+          <a href="../students_marks_display/marks_display.html"
+            ><button class="btn btn-info">BACK</button></a
+          >
+        </div>
+
+        <div class="add-marks-button">
+          <a href="../Students_Registration/index.html">
+            <button data-add-scores class="btn btn-info">
+              ADD NEW STUDENT
+            </button>
+          </a>
+        </div>
+        <div class="add-marks-button">
+          <a
+            href="../all_students_marks_display/all_students_marks_display.html"
+          >
+            <button data-add-scores class="btn btn-info">
+              VIEW ALL GRADES
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-md-flex justify-content-md-start align-items-md-start mt-md-3"
+    >
+      <div class="w-25">
+        <table class="table table-active table-bordered">
+          <thead data-all-students-head></thead>
+          <tbody data-all-students></tbody>
+        </table>
+      </div>
+
+      <div class="w-75 ml-md-2">
+        <table class="table table-bordered">
+          <thead>
+            <th>SUBJECT</th>
+            <th>SCORE(%)</th>
+            <th>SCORE(^)</th>
+            <th>GRADE</th>
+          </thead>
+          <tbody data-student-information>
+            <tr>
+              <td>HTML</td>
+              <td>87</td>
+              <td>90</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>87</td>
+              <td>90</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>JAVASCRIPT</td>
+              <td>87</td>
+              <td>90</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>REACTJS</td>
+              <td>87</td>
+              <td>90</td>
+              <td>A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
