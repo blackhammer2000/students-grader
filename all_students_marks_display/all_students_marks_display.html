@@ -41,51 +41,37 @@
     </div>
 
     <div
-      class="container-fluid d-md-flex justify-content-md-start align-items-md-start mt-md-3"
+      class="container-fluid d-md-flex justify-content-md-center align-items-md-start mt-md-3"
     >
-      <div class="w-25">
-        <table class="table table-active table-bordered">
+      <div class="w-50 px-0">
+        <div class="container-fluid text-center">
+          <h6>STUDENTS LIST</h6>
+        </div>
+        <table
+          class="table table-active table-bordered h-75 text-center table-container"
+        >
           <thead data-all-students-head></thead>
           <tbody data-all-students></tbody>
         </table>
       </div>
 
-      <div class="w-75 ml-md-2">
-        <table class="table table-bordered">
-          <thead>
-            <th>SUBJECT</th>
-            <th>SCORE(%)</th>
-            <th>SCORE(^)</th>
-            <th>GRADE</th>
-          </thead>
-          <tbody data-student-information>
-            <tr>
-              <td>HTML</td>
-              <td>87</td>
-              <td>90</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>CSS</td>
-              <td>87</td>
-              <td>90</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>JAVASCRIPT</td>
-              <td>87</td>
-              <td>90</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>REACTJS</td>
-              <td>87</td>
-              <td>90</td>
-              <td>A</td>
-            </tr>
-          </tbody>
+      <div class="w-50 ml-md-3 px-0">
+        <div class="container-fluid text-center">
+          <h6>STUDENT GRADES</h6>
+        </div>
+        <table
+          class="table table-borderless border text-center table-container"
+        >
+          <thead data-student-grades-head></thead>
+          <tbody data-student-information></tbody>
         </table>
       </div>
+    </div>
+    <div class="container mt-3 text-center font-weight-light font-italic">
+      <p>
+        STUDENT GRADING SYSTEM DESIGNED BY SAMUEL WAWERU <br />
+        &COPY; <span data-year></span>
+      </p>
     </div>
   </body>
 </html>
