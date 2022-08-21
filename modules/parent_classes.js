@@ -263,12 +263,12 @@ class Grader {
   }
 
   static roundScore(score) {
-    const moduloByFive = score % 5;
-    const previousMultiple = score - moduloByFive;
+    const modulo = score % 5;
+    const previousMultiple = score - modulo;
     const nextMultiple = previousMultiple + 5;
     const difference = nextMultiple - score;
 
-    const finalScore = difference <= 3 ? nextMultiple : score;
+    const finalScore = difference < 3 ? nextMultiple : score;
 
     return finalScore;
   }
